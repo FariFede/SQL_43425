@@ -1,0 +1,24 @@
+Este es un ejemplo de importación desde terminal. La realidad es que el total de los datos los importo directamente abriendo el archivo .sql desde el Workbench, y ejecutando la query.
+
+---------------------------------------
+
+Inicia sesión en MySQL con el siguiente comando:
+
+path C:\Program Files\MySQL\MySQL Server 8.0\bin\
+mysql -u root -p
+
+Reemplaza tu_usuario con el nombre de usuario de tu base de datos. Al presionar "Enter", se te pedirá que ingreses la contraseña de MySQL.
+Una vez dentro del cliente MySQL, selecciona la base de datos en la que deseas escribir los datos con el siguiente comando:
+
+USE nombre_de_tu_base_de_datos; (en nuestro caso, USE consultorio;)
+
+A continuación, ejecuta una sentencia INSERT INTO para agregar un nuevo registro a la tabla:
+
+INSERT INTO nombre_de_tu_tabla (columna1, columna2, columna3, ...) VALUES ('valor1', 'valor2', 'valor3', ...);
+
+Reemplaza nombre_de_tu_tabla con el nombre de la tabla en la que deseas escribir los datos. Especifica los nombres de las columnas (columna1, columna2, etc.) en el orden correspondiente a los valores que deseas insertar. Luego, proporciona los valores que deseas agregar entre comillas simples ('').
+
+INSERT INTO empleados (id, nombre, puesto) VALUES ('101', 'Juan Pérez', 'Gerente');
+INSERT INTO pacientes (paciente_id, nombre_paciente, mail, telefono, edad) VALUES ('as5er877ui', 'Pepe', 'pepo@hotmail.com', '1144874596','30');
+
+Salir con exit;

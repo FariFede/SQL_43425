@@ -1,0 +1,35 @@
+/* 
+
+Pasos para generar el backup sin estructuras, ni SPs, ni triggers, ni funciones.
+
+Abrir la terminal de Windows y dirigirnos al destino de MySQL Server:
+
+path C:\Program Files\MySQL\MySQL Server 8.0\bin\
+
+Escribir la sentencia:
+
+mysqldump -u root -p --no-create-info --skip-triggers consultorio > backup_consultorio.sql
+
+Ingresar nuestra contraseña de root.
+
+Ir a buscar el archivo a nuestro usuario de Windows (C:\Users\NombreUsuario\)
+
+
+Las tablas incluidas son: 
+consulta_virtual
+doctor
+empleados
+especialidades
+historia_clinica
+obra_social
+pacientes
+planes
+salas_atencion_por_turno
+salas_de_atencion
+salas_de_espera
+tratamientos
+tratamientos_por_paciente
+turno
+ultimos_pacientes
+
+*/

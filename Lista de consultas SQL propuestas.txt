@@ -1,0 +1,24 @@
+-- Formas de consultar las vistas.
+
+SELECT nombre_doctor FROM vista_nombre_doctor_por_historia WHERE historia_id = '';
+SELECT nombre_paciente FROM vista_nombre_paciente_por_historia WHERE historia_id = '';
+SELECT nombre_paciente FROM vista_nombre_paciente_por_turno WHERE turno_id = '';
+SELECT nombre_paciente FROM vista_nombre_paciente_por_cv WHERE consulta_virtual_id = '';
+SELECT nombre_doctor FROM vista_nombre_doctor_por_turno WHERE turno_id = '';
+SELECT nombre_doctor FROM vista_nombre_doctor_por_cv WHERE consulta_virtual_id = '';
+SELECT nombre_especialidad FROM vista_especialidad_por_doctor WHERE doctor_id = '';
+SELECT nombre_obra_social FROM vista_obra_social_por_doctor WHERE doctor_id = '';
+
+-- Ejemplo de uso de funciones.
+
+SELECT calcular_costo_final(costo, bonificacion) AS costo_final FROM tratamientos, tratamientos_por_paciente
+
+-- Ejemplos de uso de SPs.
+
+CALL InsertarPaciente ('Guido Poblete', 'guidop@gmail.com', '1162998080', 'U0tsnEecIk', 33);
+CALL InsertarPaciente ('Guido Poblete', 'guidop@gmail.com', '1162998080', 'U0tsnEecIk', 33);
+CALL InsertarTurno ('2023-09-07 17:38:14.000000', '2023-08-10 07:01:34.000000', 'fEm5JKcZBz', '1NdlrGSQZj', '2E34F5G6H7');
+CALL InsertarCv ('2023-08-10 07:01:34.000000', 'fEm5JKcZBz', '1NdlrGSQZj', '2E34F5G6H7');
+CALL InsertarHc ('Dolor de muela', '7kSJ13bwK6', 'ksj5dbziE2', '2023-07-08 09:10:50.000000', '2E34F5G6H7');
+CALL InsertarTxp ('6U78V9W0X1', 'YmVilwADcH', 'U0tsnEecIk', '9CvzUjwmFG');
+CALL OrdenarDatos ('obra_social', 'nombre_obra_social', 'ASC');
